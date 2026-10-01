@@ -240,6 +240,10 @@ class TenjinSDK {
     _channel.invokeMethod('eventAdImpressionTradPlus', transformedJson);
   }
 
+  void eventAdImpressionCustom(Map<String, dynamic> json) {
+    _channel.invokeMethod('eventAdImpressionCustom', json);
+  }
+
   /// Track a subscription with full transaction data (iOS and Android).
   void subscription({
     required String productId,

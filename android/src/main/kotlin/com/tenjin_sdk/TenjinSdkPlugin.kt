@@ -59,6 +59,7 @@ class TenjinSdkPlugin: FlutterPlugin, MethodCallHandler {
           "eventAdImpressionIronSource" -> eventAdImpressionIronSource(call.arguments as HashMap<String, Any>)
           "eventAdImpressionTopOn" -> eventAdImpressionTopOn(call.arguments as HashMap<String, Any>)
           "eventAdImpressionTradPlus" -> eventAdImpressionTradPlus(call.arguments as HashMap<String, Any>)
+          "eventAdImpressionCustom" -> eventAdImpressionCustom(call.arguments as HashMap<String, Any>)
           "getUserProfileDictionary" -> getUserProfileDictionary(call, result)
           "resetUserProfile" -> resetUserProfile(call, result)
           else -> result.notImplemented()
@@ -329,6 +330,14 @@ class TenjinSdkPlugin: FlutterPlugin, MethodCallHandler {
   private fun eventAdImpressionTradPlus(json: HashMap<String, Any>) {
     try {
       instance.eventAdImpressionTradPlus((json as Map<*, *>?)?.let { JSONObject(it) })
+    } catch (e: Exception) {
+      e.printStackTrace()
+    }
+  }
+
+  private fun eventAdImpressionCustom(json: HashMap<String, Any>) {
+    try {
+      instance.eventAdImpressionCustom((json as Map<*, *>?)?.let { JSONObject(it) })
     } catch (e: Exception) {
       e.printStackTrace()
     }
