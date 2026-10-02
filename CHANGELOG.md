@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.6.1] (2026-10-02)
+
+* Add `eventAdImpressionCustom` for both iOS and Android.
+
+
 ## [1.6.0](https://github.com/tenjin/flutter-sdk/compare/1.5.0...1.6.0) (2026-09-22)
 
 
