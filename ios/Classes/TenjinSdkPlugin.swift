@@ -439,7 +439,7 @@ public class TenjinSdkPlugin: NSObject, FlutterPlugin {
         if let json = call.arguments as? [String: Any] {
             do {
                 let jsonString = try convertToJsonString(from: json)
-                TenjinSDK.customImpressionFromJSON(fromJSON:jsonString)
+                TenjinSDK.customImpression(fromJSON:jsonString)
                 result(nil)
             } catch {
                 result(FlutterError(code: "Error", message: error.localizedDescription, details: nil))
